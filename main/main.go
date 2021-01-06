@@ -5,6 +5,17 @@ import (
 	"net/http"
 )
 
+type User struct {
+	name      string
+	age       uint8
+	money     int32
+	happiness float64
+}
+
+func (u *User) getName() string {
+	return u.name
+}
+
 func home(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintln(w, "Home")
 }
